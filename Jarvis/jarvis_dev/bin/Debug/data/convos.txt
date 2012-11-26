@@ -1,0 +1,8 @@
+what do you use to translate speech
+I use windows voice recognition
+
+what do you use for gesture control
+I use microsoft kinect sdk
+
+what are you written in
+I am written in C sharp

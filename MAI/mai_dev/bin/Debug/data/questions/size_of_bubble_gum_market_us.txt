@@ -1,0 +1,56 @@
+Estimate the size of the bubble gum market in the U.S.
+
+
+assume 280 million americans
+estimate the size of the population
+
+divide into age groups
+divide into age groups
+
+gum is sold in packs of 10 pieces
+how gum is sold
+
+gum is sold at covenience stores, grocery stores, newstands, gumball machines
+where gum is sold
+
+divide age groups evenly, 3.5 million in each age group
+divide into age groups
+
+17.5 million 0-5 year olds
+size of each age group
+
+17.5 million 6-10 year olds
+size of each age group
+
+17.5 million 11-15 year olds
+size of each age group
+
+17.5 million 16-20 year olds
+size of each age group
+
+70 million 20-40 year olds
+size of each age group
+
+140 million 40-80 year olds
+size of each age group
+
+15% of 0-5 year olds chew gum
+percentage of group that chews gum
+
+0-5 year olds eat 100 million pieces a year
+how much a group consumes
+
+6-10 year olds eat 6 billion pieces a year
+how much a group consumes
+
+11-15 year olds eat 12 billion pieces a year
+how much a group consumes
+
+16-20 year olds eat 2.5 billion pieces a year
+how much a group consumes
+
+21-40 year olds eat 200 million pieces a year
+how much a group consumes
+
+40-80 year olds eat 50 million pieces a year
+how much a group consumes

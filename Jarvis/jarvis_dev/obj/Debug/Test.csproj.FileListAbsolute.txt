@@ -1,0 +1,6 @@
+E:\Dropbox\Projects\Jarvis\Test\Test\bin\Debug\Test.exe.config
+E:\Dropbox\Projects\Jarvis\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\Dropbox\Projects\Jarvis\Test\Test\bin\Debug\Test.exe
+E:\Dropbox\Projects\Jarvis\Test\Test\bin\Debug\Test.pdb
+E:\Dropbox\Projects\Jarvis\Test\Test\obj\Debug\Test.exe
+E:\Dropbox\Projects\Jarvis\Test\Test\obj\Debug\Test.pdb

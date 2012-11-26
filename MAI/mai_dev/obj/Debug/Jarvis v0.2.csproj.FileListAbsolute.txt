@@ -1,0 +1,11 @@
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Test\bin\Debug\Test.exe.config
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Test\bin\Debug\Test.exe
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Test\bin\Debug\Test.pdb
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Test\obj\Debug\Test.exe
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Test\obj\Debug\Test.pdb
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Jarvis\bin\Debug\Test.exe.config
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Jarvis\obj\Debug\Test.exe
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\Jarvis\obj\Debug\Test.pdb
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\jarvis_dev\bin\Debug\Test.exe.config
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\jarvis_dev\obj\Debug\Test.exe
+E:\Dropbox\Projects\Jarvis\Jarvis\jarvis\jarvis_dev\obj\Debug\Test.pdb
