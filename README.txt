@@ -1,9 +1,11 @@
-Jarvis - speech and computer assistant
+Curricular Projects - all projects that I have worked on in my studies
 
-Cursor3- gesture UI
+Cursor3 - gesture UI
+
+Jarvis - speech and computer assistant
 
 MAI - modification of Jarvis to function as an artificial interviewer 
 
-Sentiment - sentiment analyzer that checks twitter's feelings around an input phrase
-
 Quant - quantitative analysis on equities 
+
+Sentiment - sentiment analyzer that checks twitter's feelings around an input phrase

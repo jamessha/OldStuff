@@ -1,0 +1,19 @@
+Person A: James Sha 
+Person B: Emily Chen 
+
+
+
+Write your answers to written problems here.
+
+
+
+1.1) The simulate method in the AntColony class
+
+
+
+1.2)
+ The exits are a list of places that are entrances. An exit is randomly picked from this list. When the simulation is called, a strategy is passed into Hive and the method strategy in Hive will get the time and bees in the wave from the assault plan. Each bee in the wave will then move to a random exit when the time is comes.
+
+1.3) Run calls start_with_strategy, which binds a particular function layout to layout. It then calls AntColony and passes it layout. Layout is bound to create_places which is passed to the method configure. Configure calls create_places and passes the queen (which is the leftmost end) and the function register_place (which appends a dictionary of places and appends a list of entrances). This means the layout function is called with the queen and the function register_place passed to it. The layout takes the queen and makes it the last exit then creates places using register_place with the length being the predefined length. Because this was done using register_place, the places are stored within a dictionary (self.places or self.bee_entrances) in AntColony. You produce more places by modifying the layout function and changing the values for the length, tunnel and the true/false for the moat. 
+
+1.4) The armor is the life of the insect, if the armor reaches 0, then the insect expires and is removed from the place it was occupying. The place then becomes None. 

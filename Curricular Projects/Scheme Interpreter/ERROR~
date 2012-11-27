@@ -1,0 +1,9 @@
+Whenever I run python scheme.py (python3 is installed as default python on my machine), I recieve two errors:
+
+Error: length attempted on improper list
+Error: length attempted on improper list
+
+I have determined that this is due to the max and min function in scheme_primitives and due to the '.' used.
+
+I am unsure as to where I went wrong in my code for this to occur. The build will run everything else (including Q10-12).
+

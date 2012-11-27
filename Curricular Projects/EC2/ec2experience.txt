@@ -1,0 +1,157 @@
+On the big dataset, what were the top 20 words by relevance for each of these n-grams, and funcNum pairs: ("jurisdiction", 0), ("court order", 1) ("in my opinion", 2)?
+	("jurisdiction", 0)
+	32.21171413591514	can
+	32.01083437445565	other
+	20.64409063245648	we
+	12.42061752205677	hear
+	9.355102447405713	first
+	6.377500222293209	habeas
+	5.894185397185298	refused
+	5.4414955507850005	well
+	5.292378828665271	district
+	4.620836203761207	administrative
+	4.441125613148675	noncriminal
+	4.1689115642856525	oikoumeno
+	4.147343892737104	she
+	3.6978692383083462	how
+	2.794890762901178	icj
+	2.6539285986436654	kusel
+	2.1840848944110194	make
+	2.1262726932184637	whose
+	1.8697238361475557	merits
+	1.7283679110789743	curtail
+
+	("court order", 1)
+	5.194710899225096	you saying
+	4.7311837160274095	was no
+	2.426826740672223	workplaces of
+	1.491350399448299	while i
+	1.4641286681352108	you like
+	1.4012155561871877	videos as
+	0.7845736356635494	usa and
+	0.7745982756839256	words the
+	0.7455935941607886	was the
+	0.7287185840047566	was severely
+	0.6166761629712005	you try
+	0.4794189576887735	wants to
+	0.4722016170229241	you by
+	0.1373962138821522	we have
+	0.12581110214262253	you obeying
+	0.117385252583978	way that
+	0.09481010597877527	with his
+	0.051855294953567936	wrong in
+	0.04690914024559754	were to
+	0.0215061713064312	was breaching
+
+	("in my opinion", 2)
+	11.504536351176654	7600gr is way
+	10.583497488402243	3d2 strong in
+	9.828095897127744	2c e taste
+	7.514567843016097	2 recently and
+	6.280262726228259	650 it s
+	5.328394431822871	71 blackbird scores
+	4.914047948563872	10 3 were
+	2.7666663396003366	00 on my
+	2.7192019489758503	27 28 we
+	1.7612652367302133	4 contexts above
+	1.6047116111669877	22 63 is
+	1.228511987140968	4 be aware
+	1.2192088954170974	17 in my
+	1.1652462062409632	1h and if
+	1.1652462062409632	60csx is the
+	1.1652462062409632	7 both these
+	1.0690234661776317	2005 to 05
+	0.9133617510104887	000 00 on
+	0.8457697222535716	000 al qaeda
+	0.5968979887995769	6 string guitar
+	
+	Note: I did notice a difference in outputs when running with and without the combiner on. I believe that this matches the actual correct answer (at least for jurisdiction 0, I did not run it on more to prevent excessive fund usage). My other answer for jurisdiction 0, however, did not match the staff solution either. Since it did work for part 1 and outputted what I think is the actual correct solution, I believe that this is due to my particular implementation of reduce2. When the second "if (combiner)" is not commented out, reduce2 is run twice. As a result, the output of the first reduce2 (which is sorted correctly) is fed into reduce2 again. The first time, it is sorted correctly since I converted all coocurrence rates to negative values and hadoop sorts from smallest to largest. However, in the output stage, I converted them back into positive values using abs() causing the re-sort to become skewed (it is still locally sorted correctly since the output is broken into pieces first so already sorted pieces will remain sorted correctly; in other words, if you take the first line of each descending sorted block and place them together, the result will be ascending lines). But since this breaking may be in different areas, there can be multiple ways of breaking the result of the first reduce2 which explains why my highest output is not "maclay" despite my combiner=false version producing the correct output. 
+	For example without combiner:
+	("jurisdiction", 0):
+	117.86215489435645	948d
+	85.61828149338308	unwarrantable
+	68.63618949488759	469a
+	55.161125384567285	dcourty
+	52.215895577663545	mannanneri
+	49.56658619079467	rovided
+	48.95560307123129	jurisconsults
+	44.77441174511995	jurisd
+	43.1101579283977	shouba
+	42.74678091112799	gupvi
+	40.49449783788762	shiname
+	40.49449783788762	yadeinu
+	40.49449783788762	tahaht
+	34.55770340170768	garnishee
+	30.880826402115943	laarf
+	30.440305203142977	therof
+	24.45659043933811	deferring
+	24.1897174218863	ccc
+	24.14688507565315	a0mandatory
+	21.631283428124803	extraterritorial
+
+How long did each run of program take on each number of instances? How many mappers, and how many reducers did you use?
+	Large 5
+	("jurisdiction", 0):	Phase 1: 26min 12sec, 316 map, 32 reduce; Phase 2: 00min 49sec, 32 map, 1 reduce
+	("court order", 1):		Phase 1: 45min 04sec, 316 map, 32 reduce; Phase 2: 07min 40sec, 32 map, 1 reduce
+	("in my opinion", 2):	Phase 1: 73min 55sec, 316 map, 32 reduce; Phase 2: 46min 53sec, 32 map, 1 reduce
+
+	Large 9
+	("jurisdiction", 0):	Phase 1: 15min 30sec, 316 map, 32 reduce; Phase 2: 00min 49sec, 32 map, 1 reduce
+	("court order", 1):		Phase 1: 24min 49sec, 316 map, 32 reduce; Phase 2: 08min 15sec, 32 map, 1 reduce
+	("in my opinion", 2):	Phase 1: 44min 39sec, 316 map, 32 reduce; Phase 2: 50min 59sec, 32 map, 1 reduce
+
+What was the median processing rate per GB (= 2^30 bytes) of input for the tests using 5 workers?  Using 9 workers?
+	Large 5 Total Time: 
+	("jurisdiction", 0): 1572s 
+	("court order", 1):	 2424s 
+	("in my opinion", 2): 4435s
+	Large 9 Total Time: 
+	("jurisdiction", 0): 930s 
+	("court order", 1):	1489s
+	("in my opinion", 2): 2318s
+	Large 5 Total Data: 
+	("jurisdiction", 0): 19141430787 = 17.83GB
+	("court order", 1):	19141325511 = 17.83GB
+	("in my opinion", 2): 19141288872 = 17.83GB
+	Large 9 Total Data: 
+	("jurisdiction", 0): 19141430787 = 17.83GB
+	("court order", 1):	19141325511 = 17.83GB
+	("in my opinion", 2): 19141288872 = 17.83GB
+
+	Large 5 Processing Rate:
+	("jurisdiction", 0): 1572s / 17.83GB = 88.17s/GB
+	("court order", 1):	 2424s / 17.83GB = 135.95s/GB
+	("in my opinion", 2): 4435s / 17.83GB = 248.74s/GB
+
+	Median: 135.95s/GB
+
+What percentage speedup did you get using 9 workers instead of 5? How well, in your opinion, does Hadoop parallelize your code?
+	Disregarding ("in my opinion", 2) on Large 9, which seems to be an outlier,
+	Large 5 Total Time: 1572 + 2424 + 4435 = 8431s
+	Large 9 Total Time: 930 + 1489 +2318 = 5232s
+
+	% speedup = (8431-5232)/8431 = 37.94% decrease in time
+
+What was the price per GB processed? (Recall that an extra-large instance costs $0.68 per hour, rounded up to the nearest hour.)
+	Large 5:
+	Total Data: 17.83GB * 3 = 53.49GB
+	Total Time: 1572 + 2424 + 4435 = 8431s = 2.34h
+	Price/GB =(2.34h * $0.68/h) / 53.49GB = $0.28/GB
+
+	Large 9:
+	Total Data: 17.83GB * 3 = 53.49GB
+	Total Time: 930 + 1489 +2318 = 5232s = 1.45h
+	Price/GB =(1.45h * $0.68/h) / 53.49GB = $0.18/GB
+
+How many dollars in EC2 credits did you use to complete this project? (Please don't use ec2-usage, as it tends to return bogus costs. You should work out the math yourself.)
+	9/19/12: 5 servers 2 hours
+	9/19/12: 5 servers 1 hour
+	9/20/12: 9 servers 2 hours
+	9/20/12: 9 servers 1 hour
+	9/20/12: 5 servers 2 hours
+	Total Server Hours: 5*2 + 5*1 + 9*2 + 9*1 + 5*2 = 52 Server Hours
+	Total Cost: 52 * $0.68/h = $35.36
+	Note: Total hours spent on servers higher than total hours spent running programs due to errors in some runs leading to repeated runs
+
+Extra credit: did you use a combiner? What does it do, specifically, in your implementation?
+	I utilized a combiner to reduce and compute the Sg (sum of f(dist)) for each word in each document. This reduces the amount of work the final reducer has to perform by cutting the number of keys outputted from one document to one per word.

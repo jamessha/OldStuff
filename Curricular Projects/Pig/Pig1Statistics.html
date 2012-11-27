@@ -1,0 +1,1617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>"Pig (Pig-out)" Analysis</title>
+  
+  <meta content="Bill Butler" name="author">
+  <meta content="Probability of Reaching 100 in &quot;N&quot; Turns and Optimal Strategy" name="description"><style type="text/css">
+#wrapper {
+  border-style: solid;
+  margin: auto;
+  padding: 20px;
+  width: 730px;
+  max-width: 730px;
+  background-color: #ffffcc;
+  text-align: left;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ccffff;
+  text-align: center;
+}
+
+</style></head><body>
+<div id="wrapper">
+<div style="text-align: center;"><font size="+3">Durango Bill's</font><br>
+<font size="+2">"Pig (Pig-out)" Analysis<br>
+</font><br>
+<br>
+<br>
+<font size="+2"><font size="+1">Probability of Reaching 100 in "N" Turns and Optimal
+Strategy<br>
+for the Dice Game "Pig" (also called Pig-out, Pass the Pigs)<br>
+(Lose turn total on single "1". Lose total score on double 1's.)</font><br>
+<br>
+</font>
+<div style="text-align: left;"><font size="+1">Statistics for the Dice
+Game of Pig (Pig-Out, Pass the Pigs)</font><br>
+<br>
+This table shows the probability (in percent) of reaching 100<br>
+or more in "N" turns if using Optimal Strategy (See below).<br>
+(All values for a Start-of-Turn score of 100 or higher = 100.0.)<br>
+(Lose turn total on single "1". Lose total score on double 1's.)<br>
+<br>
+Computer program by Bill Butler<br>
+<br>
+<font size="-1"><span style="font-family: Courier New;">Score at</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Start
+of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&nbsp; Intended Number of
+turns to reach 100 or higher&nbsp; ---&gt;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Turn&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10&nbsp;&nbsp;
+11&nbsp;&nbsp; 12&nbsp;&nbsp; 13&nbsp;&nbsp; 14&nbsp;&nbsp; 15 </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">-------------------------------------------------------------------------------</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">99&nbsp;&nbsp; 69.4 88.8 94.2
+95.7 96.2 96.4 96.6 96.8 97.0 97.2 97.4 97.7 97.9 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">98&nbsp;&nbsp; 69.4 88.8 94.2
+95.7 96.2 96.4 96.6 96.8 97.0 97.2 97.4 97.7 97.9 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">97&nbsp;&nbsp; 69.4 88.8 94.2
+95.7 96.2 96.4 96.6 96.8 97.0 97.2 97.4 97.7 97.9 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">96&nbsp;&nbsp; 69.4 88.8 94.2
+95.7 96.2 96.4 96.6 96.8 97.0 97.2 97.4 97.7 97.9 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">95&nbsp;&nbsp; 68.6 88.2 93.8
+95.5 96.0 96.3 96.4 96.6 96.9 97.1 97.3 97.6 97.8 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">94&nbsp;&nbsp; 66.9 87.1 93.2
+95.0 95.7 96.0 96.2 96.4 96.6 96.9 97.1 97.4 97.7 97.9 98.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">93&nbsp;&nbsp; 64.4 85.2 92.0
+94.3 95.1 95.5 95.7 96.0 96.2 96.5 96.8 97.1 97.4 97.7 97.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">92&nbsp;&nbsp; 61.0 82.6 90.3
+93.1 94.3 94.8 95.1 95.4 95.7 96.0 96.3 96.7 97.0 97.3 97.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">91&nbsp;&nbsp; 56.7 79.0 87.9
+91.5 93.2 94.0 94.4 94.7 95.1 95.4 95.8 96.2 96.5 96.9 97.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">90&nbsp;&nbsp; 53.2 75.9 85.6
+90.2 92.3 93.3 93.8 94.2 94.5 94.9 95.3 95.7 96.1 96.5 96.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">89&nbsp;&nbsp; 50.4 73.2 83.5
+89.0 91.6 92.7 93.3 93.7 94.1 94.5 94.9 95.4 95.8 96.3 96.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">88&nbsp;&nbsp; 48.2 71.0 81.7
+88.0 91.0 92.2 92.9 93.3 93.7 94.2 94.6 95.1 95.6 96.0 96.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">87&nbsp;&nbsp; 46.6 69.2 80.3
+87.1 90.3 91.8 92.5 93.0 93.4 93.9 94.4 94.8 95.3 95.8 96.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">86&nbsp;&nbsp; 45.3 67.9 79.3
+86.3 89.8 91.3 92.1 92.7 93.1 93.6 94.1 94.6 95.1 95.6 96.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">85&nbsp;&nbsp; 43.7 66.1 77.9
+85.3 89.0 90.8 91.7 92.3 92.8 93.3 93.8 94.3 94.8 95.4 95.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">84&nbsp;&nbsp; 41.8 64.0 76.2
+84.0 88.0 90.0 91.1 91.8 92.3 92.9 93.4 94.0 94.5 95.1 95.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">83&nbsp;&nbsp; 39.7 61.5 74.3
+82.4 86.9 89.2 90.5 91.2 91.8 92.4 93.0 93.6 94.2 94.7 95.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">82&nbsp;&nbsp; 37.7 59.1 72.3
+80.9 85.7 88.3 89.8 90.7 91.3 91.9 92.5 93.2 93.8 94.4 95.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">81&nbsp;&nbsp; 35.8 56.7 70.3
+79.3 84.5 87.5 89.1 90.2 90.9 91.5 92.1 92.8 93.4 94.1 94.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">80&nbsp;&nbsp; 34.1 54.6 68.5
+77.9 83.4 86.6 88.5 89.6 90.4 91.1 91.8 92.4 93.1 93.8 94.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">79&nbsp;&nbsp; 32.7 52.7 66.9
+76.5 82.3 85.9 87.9 89.2 90.0 90.7 91.4 92.1 92.8 93.5 94.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">78&nbsp;&nbsp; 31.4 51.0 65.3
+75.2 81.3 85.1 87.3 88.7 89.6 90.3 91.1 91.8 92.5 93.2 93.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">77&nbsp;&nbsp; 30.1 49.3 63.7
+73.8 80.2 84.3 86.7 88.1 89.1 89.9 90.7 91.4 92.2 92.9 93.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">76&nbsp;&nbsp; 28.9 47.6 62.0
+72.4 79.1 83.4 86.0 87.6 88.7 89.5 90.3 91.1 91.9 92.6 93.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">75&nbsp;&nbsp; 27.6 45.8 60.2
+70.8 77.8 82.4 85.2 87.0 88.2 89.1 89.9 90.7 91.5 92.3 93.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">74&nbsp;&nbsp; 26.3 44.0 58.4
+69.1 76.5 81.4 84.4 86.3 87.6 88.6 89.5 90.3 91.2 92.0 92.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">73&nbsp;&nbsp; 25.1 42.2 56.5
+67.5 75.2 80.3 83.6 85.7 87.1 88.2 89.1 90.0 90.8 91.7 92.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">72&nbsp;&nbsp; 23.9 40.6 54.8
+65.8 73.8 79.2 82.7 85.0 86.6 87.7 88.7 89.6 90.5 91.3 92.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">71&nbsp;&nbsp; 22.9 39.0 53.0
+64.2 72.5 78.2 81.9 84.4 86.0 87.2 88.3 89.2 90.1 91.0 91.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">70&nbsp;&nbsp; 21.9 37.5 51.4
+62.7 71.2 77.2 81.1 83.7 85.5 86.8 87.8 88.8 89.8 90.7 91.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">69&nbsp;&nbsp; 20.9 36.1 49.9
+61.2 70.0 76.1 80.2 83.0 84.9 86.3 87.4 88.5 89.4 90.4 91.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">68&nbsp;&nbsp; 20.0 34.7 48.3
+59.7 68.6 75.0 79.4 82.3 84.4 85.8 87.0 88.1 89.1 90.1 91.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">67&nbsp;&nbsp; 19.2 33.3 46.7
+58.2 67.3 73.9 78.5 81.6 83.8 85.3 86.6 87.7 88.7 89.8 90.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">66&nbsp;&nbsp; 18.3 32.0 45.2
+56.6 65.9 72.8 77.5 80.8 83.1 84.8 86.1 87.3 88.4 89.4 90.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">65&nbsp;&nbsp; 17.5 30.7 43.7
+55.1 64.6 71.6 76.6 80.1 82.5 84.3 85.7 86.9 88.0 89.1 90.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">64&nbsp;&nbsp; 16.7 29.5 42.2
+53.6 63.2 70.4 75.6 79.3 81.9 83.7 85.2 86.5 87.6 88.8 89.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">63&nbsp;&nbsp; 16.0 28.3 40.7
+52.1 61.8 69.2 74.6 78.5 81.2 83.2 84.8 86.1 87.3 88.4 89.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">62&nbsp;&nbsp; 15.3 27.1 39.4
+50.7 60.5 68.0 73.7 77.7 80.5 82.6 84.3 85.7 86.9 88.1 89.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">61&nbsp;&nbsp; 14.6 26.0 38.0
+49.3 59.1 66.9 72.7 76.8 79.9 82.1 83.8 85.2 86.5 87.8 88.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">60&nbsp;&nbsp; 14.0 25.0 36.7
+47.9 57.8 65.7 71.7 76.0 79.2 81.5 83.3 84.8 86.2 87.4 88.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">59&nbsp;&nbsp; 13.4 24.0 35.4
+46.5 56.5 64.5 70.6 75.2 78.5 80.9 82.8 84.4 85.8 87.1 88.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">58&nbsp;&nbsp; 12.8 23.0 34.2
+45.2 55.1 63.3 69.6 74.3 77.8 80.3 82.3 84.0 85.4 86.7 88.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">57&nbsp;&nbsp; 12.2 22.0 33.0
+43.8 53.8 62.0 68.5 73.4 77.0 79.7 81.8 83.5 85.0 86.4 87.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">56&nbsp;&nbsp; 11.7 21.1 31.8
+42.5 52.5 60.8 67.5 72.5 76.3 79.1 81.3 83.1 84.6 86.0 87.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">55&nbsp;&nbsp; 11.1 20.2 30.6
+41.3 51.1 59.6 66.4 71.6 75.5 78.5 80.8 82.6 84.2 85.7 87.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">54&nbsp;&nbsp; 10.7 19.4 29.5
+40.0 49.9 58.4 65.3 70.7 74.7 77.8 80.2 82.2 83.8 85.3 86.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">53&nbsp;&nbsp; 10.2 18.6 28.4
+38.8 48.6 57.1 64.2 69.7 74.0 77.2 79.7 81.7 83.4 84.9 86.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">52&nbsp;&nbsp;&nbsp; 9.7 17.8
+27.4 37.6 47.3 55.9 63.1 68.8 73.2 76.5 79.1 81.2 83.0 84.6 86.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">51&nbsp;&nbsp;&nbsp; 9.3 17.1
+26.4 36.4 46.1 54.7 62.0 67.9 72.4 75.8 78.6 80.7 82.6 84.2 85.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">50&nbsp;&nbsp;&nbsp; 8.9 16.4
+25.4 35.2 44.8 53.5 60.9 66.9 71.6 75.2 78.0 80.3 82.2 83.8 85.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">49&nbsp;&nbsp;&nbsp; 8.5 15.7
+24.5 34.1 43.6 52.3 59.8 65.9 70.7 74.5 77.4 79.8 81.7 83.5 85.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">48&nbsp;&nbsp;&nbsp; 8.1 15.0
+23.5 33.0 42.4 51.1 58.7 65.0 69.9 73.8 76.8 79.3 81.3 83.1 84.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">47&nbsp;&nbsp;&nbsp; 7.8 14.4
+22.7 31.9 41.2 50.0 57.6 64.0 69.1 73.1 76.2 78.7 80.9 82.7 84.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">46&nbsp;&nbsp;&nbsp; 7.4 13.8
+21.8 30.9 40.1 48.8 56.5 63.0 68.2 72.3 75.6 78.2 80.4 82.3 84.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">45&nbsp;&nbsp;&nbsp; 7.1 13.2
+21.0 29.8 38.9 47.6 55.4 62.0 67.3 71.6 75.0 77.7 80.0 81.9 83.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">44&nbsp;&nbsp;&nbsp; 6.8 12.6
+20.2 28.8 37.8 46.5 54.3 61.0 66.5 70.9 74.3 77.2 79.5 81.5 83.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">43&nbsp;&nbsp;&nbsp; 6.5 12.1
+19.4 27.9 36.7 45.4 53.2 60.0 65.6 70.1 73.7 76.6 79.0 81.1 82.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">42&nbsp;&nbsp;&nbsp; 6.2 11.6
+18.7 26.9 35.7 44.3 52.1 59.0 64.7 69.3 73.1 76.1 78.6 80.7 82.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">41&nbsp;&nbsp;&nbsp; 5.9 11.1
+17.9 26.0 34.6 43.2 51.1 58.0 63.8 68.6 72.4 75.5 78.1 80.3 82.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">40&nbsp;&nbsp;&nbsp; 5.7 10.6
+17.2 25.1 33.6 42.1 50.0 57.0 62.9 67.8 71.7 75.0 77.6 79.9 81.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">39&nbsp;&nbsp;&nbsp; 5.4 10.2
+16.6 24.3 32.6 41.0 48.9 56.0 62.0 67.0 71.1 74.4 77.1 79.5 81.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">38&nbsp;&nbsp;&nbsp; 5.2&nbsp;
+9.7 15.9 23.4 31.6 40.0 47.9 55.0 61.1 66.2 70.4 73.8 76.6 79.0 81.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">37&nbsp;&nbsp;&nbsp; 5.0&nbsp;
+9.3 15.3 22.6 30.7 38.9 46.8 54.0 60.2 65.4 69.7 73.2 76.1 78.6 80.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">36&nbsp;&nbsp;&nbsp; 4.7&nbsp;
+8.9 14.7 21.8 29.7 37.9 45.8 53.0 59.3 64.6 69.0 72.6 75.6 78.2 80.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">35&nbsp;&nbsp;&nbsp; 4.5&nbsp;
+8.5 14.1 21.1 28.8 36.9 44.8 52.0 58.4 63.8 68.3 72.0 75.1 77.7 80.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">34&nbsp;&nbsp;&nbsp; 4.3&nbsp;
+8.2 13.6 20.3 27.9 35.9 43.8 51.0 57.5 63.0 67.6 71.4 74.6 77.3 79.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">33&nbsp;&nbsp;&nbsp; 4.1&nbsp;
+7.8 13.0 19.6 27.1 35.0 42.8 50.1 56.6 62.2 66.9 70.8 74.1 76.8 79.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">32&nbsp;&nbsp;&nbsp; 4.0&nbsp;
+7.5 12.5 18.9 26.2 34.0 41.8 49.1 55.6 61.3 66.2 70.2 73.5 76.3 78.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">31&nbsp;&nbsp;&nbsp; 3.8&nbsp;
+7.2 12.0 18.2 25.4 33.1 40.8 48.1 54.7 60.5 65.4 69.5 73.0 75.9 78.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">30&nbsp;&nbsp;&nbsp; 3.6&nbsp;
+6.9 11.6 17.6 24.6 32.2 39.8 47.2 53.8 59.7 64.7 68.9 72.4 75.4 78.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">29&nbsp;&nbsp;&nbsp; 3.5&nbsp;
+6.6 11.1 16.9 23.8 31.3 38.9 46.2 52.9 58.8 63.9 68.3 71.9 74.9 77.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">28&nbsp;&nbsp;&nbsp; 3.3&nbsp;
+6.3 10.7 16.3 23.0 30.4 38.0 45.3 52.0 58.0 63.2 67.6 71.3 74.5 77.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">27&nbsp;&nbsp;&nbsp; 3.2&nbsp;
+6.0 10.2 15.7 22.3 29.6 37.0 44.3 51.1 57.2 62.5 67.0 70.7 74.0 76.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">26&nbsp;&nbsp;&nbsp; 3.0&nbsp;
+5.8&nbsp; 9.8 15.2 21.6 28.7 36.1 43.4 50.2 56.3 61.7 66.3 70.2 73.5
+76.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">25&nbsp;&nbsp;&nbsp; 2.9&nbsp;
+5.5&nbsp; 9.4 14.6 20.9 27.9 35.2 42.5 49.3 55.5 60.9 65.6 69.6 73.0
+75.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">24&nbsp;&nbsp;&nbsp; 2.8&nbsp;
+5.3&nbsp; 9.1 14.1 20.2 27.1 34.4 41.6 48.4 54.7 60.2 65.0 69.0 72.5
+75.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">23&nbsp;&nbsp;&nbsp; 2.6&nbsp;
+5.1&nbsp; 8.7 13.6 19.5 26.3 33.5 40.7 47.5 53.8 59.4 64.3 68.4 72.0
+75.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">22&nbsp;&nbsp;&nbsp; 2.5&nbsp;
+4.8&nbsp; 8.3 13.1 18.9 25.6 32.6 39.8 46.7 53.0 58.7 63.6 67.8 71.4
+74.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">21&nbsp;&nbsp;&nbsp; 2.4&nbsp;
+4.6&nbsp; 8.0 12.6 18.3 24.8 31.8 38.9 45.8 52.2 57.9 62.9 67.2 70.9
+74.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">20&nbsp;&nbsp;&nbsp; 2.3&nbsp;
+4.4&nbsp; 7.7 12.1 17.7 24.1 31.0 38.1 44.9 51.4 57.1 62.2 66.6 70.4
+73.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">19&nbsp;&nbsp;&nbsp; 2.2&nbsp;
+4.2&nbsp; 7.4 11.7 17.1 23.4 30.2 37.2 44.1 50.5 56.4 61.5 66.0 69.9
+73.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">18&nbsp;&nbsp;&nbsp; 2.1&nbsp;
+4.1&nbsp; 7.1 11.3 16.5 22.7 29.4 36.4 43.2 49.7 55.6 60.8 65.4 69.3
+72.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">17&nbsp;&nbsp;&nbsp; 2.0&nbsp;
+3.9&nbsp; 6.8 10.8 16.0 22.0 28.6 35.6 42.4 48.9 54.8 60.1 64.8 68.8
+72.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">16&nbsp;&nbsp;&nbsp; 1.9&nbsp;
+3.7&nbsp; 6.5 10.4 15.4 21.3 27.9 34.7 41.6 48.1 54.1 59.4 64.2 68.2
+71.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">15&nbsp;&nbsp;&nbsp; 1.8&nbsp;
+3.6&nbsp; 6.3 10.1 14.9 20.7 27.2 33.9 40.7 47.3 53.3 58.7 63.5 67.7
+71.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">14&nbsp;&nbsp;&nbsp; 1.8&nbsp;
+3.4&nbsp; 6.0&nbsp; 9.7 14.4 20.1 26.4 33.2 39.9 46.5 52.6 58.0 62.9
+67.1 70.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">13&nbsp;&nbsp;&nbsp; 1.7&nbsp;
+3.3&nbsp; 5.8&nbsp; 9.3 13.9 19.5 25.7 32.4 39.1 45.7 51.8 57.3 62.3
+66.6 70.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">12&nbsp;&nbsp;&nbsp; 1.6&nbsp;
+3.1&nbsp; 5.5&nbsp; 9.0 13.5 18.9 25.0 31.6 38.3 44.9 51.0 56.6 61.6
+66.0 69.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">11&nbsp;&nbsp;&nbsp; 1.5&nbsp;
+3.0&nbsp; 5.3&nbsp; 8.7 13.0 18.3 24.4 30.9 37.6 44.1 50.3 55.9 61.0
+65.4 69.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">10&nbsp;&nbsp;&nbsp; 1.5&nbsp;
+2.9&nbsp; 5.1&nbsp; 8.3 12.6 17.8 23.7 30.2 36.8 43.3 49.5 55.2 60.4
+64.9 68.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">9&nbsp;&nbsp;&nbsp;&nbsp;
+1.4&nbsp; 2.7&nbsp; 4.9&nbsp; 8.0 12.1 17.2 23.1 29.4 36.0 42.6 48.8
+54.5 59.7 64.3 68.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">8&nbsp;&nbsp;&nbsp;&nbsp;
+1.3&nbsp; 2.6&nbsp; 4.7&nbsp; 7.7 11.7 16.7 22.4 28.7 35.3 41.8 48.0
+53.8 59.1 63.7 67.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">7&nbsp;&nbsp;&nbsp;&nbsp;
+1.3&nbsp; 2.5&nbsp; 4.5&nbsp; 7.4 11.3 16.2 21.8 28.0 34.5 41.0 47.3
+53.1 58.4 63.1 67.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">6&nbsp;&nbsp;&nbsp;&nbsp;
+1.2&nbsp; 2.4&nbsp; 4.3&nbsp; 7.2 11.0 15.7 21.2 27.4 33.8 40.3 46.6
+52.4 57.8 62.6 66.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">5&nbsp;&nbsp;&nbsp;&nbsp;
+1.2&nbsp; 2.3&nbsp; 4.2&nbsp; 6.9 10.6 15.2 20.6 26.7 33.1 39.6 45.8
+51.8 57.1 62.0 66.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">4&nbsp;&nbsp;&nbsp;&nbsp;
+1.1&nbsp; 2.2&nbsp; 4.0&nbsp; 6.6 10.2 14.7 20.1 26.0 32.4 38.8 45.1
+51.1 56.5 61.4 65.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">3&nbsp;&nbsp;&nbsp;&nbsp;
+1.1&nbsp; 2.1&nbsp; 3.8&nbsp; 6.4&nbsp; 9.9 14.3 19.5 25.4 31.7 38.1
+44.4 50.4 55.9 60.8 65.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">2&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp; 2.0&nbsp; 3.7&nbsp; 6.2&nbsp; 9.5 13.8 19.0 24.8 31.0 37.4
+43.7 49.7 55.2 60.2 64.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">1&nbsp;&nbsp;&nbsp;&nbsp;
+1.0&nbsp; 1.9&nbsp; 3.5&nbsp; 5.9&nbsp; 9.2 13.4 18.5 24.2 30.4 36.7
+43.0 49.0 54.6 59.6 64.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">0&nbsp;&nbsp;&nbsp;&nbsp;
+0.9&nbsp; 1.9&nbsp; 3.4&nbsp; 5.7&nbsp; 8.9 13.0 17.9 23.6 29.7 36.0
+42.3 48.3 53.9 59.0 63.6</span><br style="font-family: Courier New;">
+<br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Score at</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Start
+of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&nbsp; Intended Number of
+turns to reach 100 or higher&nbsp; ---&gt;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Turn&nbsp; 16&nbsp;&nbsp;
+17&nbsp;&nbsp; 18&nbsp;&nbsp; 19&nbsp;&nbsp; 20&nbsp;&nbsp;
+21&nbsp;&nbsp; 22&nbsp;&nbsp; 23&nbsp;&nbsp; 24&nbsp;&nbsp;
+25&nbsp;&nbsp; 26&nbsp;&nbsp; 27&nbsp;&nbsp; 28&nbsp;&nbsp;
+29&nbsp;&nbsp; 30 </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">-------------------------------------------------------------------------------</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">99&nbsp;&nbsp; 98.5 98.7 98.8
+99.0 99.1 99.2 99.3 99.3 99.4 99.5 99.5 99.6 99.6 99.7 99.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">98&nbsp;&nbsp; 98.5 98.7 98.8
+99.0 99.1 99.2 99.3 99.3 99.4 99.5 99.5 99.6 99.6 99.7 99.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">97&nbsp;&nbsp; 98.5 98.7 98.8
+99.0 99.1 99.2 99.3 99.3 99.4 99.5 99.5 99.6 99.6 99.7 99.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">96&nbsp;&nbsp; 98.5 98.7 98.8
+99.0 99.1 99.2 99.3 99.3 99.4 99.5 99.5 99.6 99.6 99.7 99.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">95&nbsp;&nbsp; 98.5 98.6 98.8
+98.9 99.0 99.1 99.2 99.3 99.4 99.4 99.5 99.6 99.6 99.6 99.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">94&nbsp;&nbsp; 98.3 98.5 98.7
+98.8 99.0 99.1 99.2 99.3 99.3 99.4 99.5 99.5 99.6 99.6 99.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">93&nbsp;&nbsp; 98.1 98.3 98.5
+98.7 98.8 99.0 99.1 99.2 99.2 99.3 99.4 99.5 99.5 99.6 99.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">92&nbsp;&nbsp; 97.9 98.1 98.3
+98.5 98.7 98.8 98.9 99.0 99.1 99.2 99.3 99.4 99.4 99.5 99.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">91&nbsp;&nbsp; 97.5 97.8 98.0
+98.3 98.4 98.6 98.8 98.9 99.0 99.1 99.2 99.3 99.4 99.4 99.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">90&nbsp;&nbsp; 97.2 97.6 97.8
+98.1 98.3 98.5 98.6 98.8 98.9 99.0 99.1 99.2 99.3 99.4 99.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">89&nbsp;&nbsp; 97.0 97.3 97.6
+97.9 98.1 98.3 98.5 98.7 98.8 98.9 99.0 99.1 99.2 99.3 99.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">88&nbsp;&nbsp; 96.8 97.2 97.5
+97.8 98.0 98.2 98.4 98.6 98.7 98.9 99.0 99.1 99.2 99.3 99.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">87&nbsp;&nbsp; 96.7 97.0 97.4
+97.6 97.9 98.1 98.3 98.5 98.7 98.8 98.9 99.0 99.1 99.2 99.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">86&nbsp;&nbsp; 96.5 96.9 97.2
+97.5 97.8 98.0 98.2 98.4 98.6 98.7 98.9 99.0 99.1 99.2 99.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">85&nbsp;&nbsp; 96.3 96.7 97.1
+97.4 97.7 97.9 98.1 98.3 98.5 98.7 98.8 98.9 99.0 99.1 99.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">84&nbsp;&nbsp; 96.1 96.5 96.9
+97.2 97.5 97.8 98.0 98.2 98.4 98.6 98.7 98.9 99.0 99.1 99.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">83&nbsp;&nbsp; 95.8 96.2 96.7
+97.0 97.3 97.6 97.9 98.1 98.3 98.5 98.6 98.8 98.9 99.0 99.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">82&nbsp;&nbsp; 95.5 96.0 96.4
+96.8 97.2 97.5 97.7 98.0 98.2 98.4 98.5 98.7 98.8 99.0 99.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">81&nbsp;&nbsp; 95.2 95.8 96.2
+96.6 97.0 97.3 97.6 97.9 98.1 98.3 98.5 98.6 98.8 98.9 99.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">80&nbsp;&nbsp; 95.0 95.5 96.0
+96.5 96.8 97.2 97.5 97.7 98.0 98.2 98.4 98.6 98.7 98.8 99.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">79&nbsp;&nbsp; 94.8 95.3 95.8
+96.3 96.7 97.1 97.4 97.6 97.9 98.1 98.3 98.5 98.6 98.8 98.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">78&nbsp;&nbsp; 94.6 95.1 95.7
+96.1 96.6 96.9 97.3 97.5 97.8 98.0 98.2 98.4 98.6 98.7 98.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">77&nbsp;&nbsp; 94.3 94.9 95.5
+96.0 96.4 96.8 97.1 97.4 97.7 97.9 98.2 98.4 98.5 98.7 98.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">76&nbsp;&nbsp; 94.1 94.7 95.3
+95.8 96.3 96.7 97.0 97.3 97.6 97.9 98.1 98.3 98.5 98.6 98.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">75&nbsp;&nbsp; 93.8 94.5 95.1
+95.6 96.1 96.5 96.9 97.2 97.5 97.8 98.0 98.2 98.4 98.6 98.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">74&nbsp;&nbsp; 93.5 94.2 94.9
+95.4 95.9 96.4 96.7 97.1 97.4 97.7 97.9 98.1 98.3 98.5 98.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">73&nbsp;&nbsp; 93.3 94.0 94.6
+95.2 95.7 96.2 96.6 97.0 97.3 97.6 97.8 98.0 98.3 98.4 98.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">72&nbsp;&nbsp; 93.0 93.7 94.4
+95.0 95.6 96.0 96.5 96.8 97.2 97.5 97.7 98.0 98.2 98.4 98.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">71&nbsp;&nbsp; 92.7 93.5 94.2
+94.8 95.4 95.9 96.3 96.7 97.1 97.4 97.6 97.9 98.1 98.3 98.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">70&nbsp;&nbsp; 92.5 93.3 94.0
+94.6 95.2 95.7 96.2 96.6 97.0 97.3 97.6 97.8 98.0 98.2 98.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">69&nbsp;&nbsp; 92.2 93.0 93.8
+94.5 95.1 95.6 96.1 96.5 96.8 97.2 97.5 97.7 98.0 98.2 98.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">68&nbsp;&nbsp; 92.0 92.8 93.6
+94.3 94.9 95.4 95.9 96.4 96.7 97.1 97.4 97.7 97.9 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">67&nbsp;&nbsp; 91.7 92.6 93.3
+94.1 94.7 95.3 95.8 96.2 96.6 97.0 97.3 97.6 97.8 98.1 98.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">66&nbsp;&nbsp; 91.4 92.3 93.1
+93.9 94.5 95.1 95.6 96.1 96.5 96.9 97.2 97.5 97.8 98.0 98.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">65&nbsp;&nbsp; 91.1 92.1 92.9
+93.7 94.3 95.0 95.5 96.0 96.4 96.8 97.1 97.4 97.7 97.9 98.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">64&nbsp;&nbsp; 90.9 91.8 92.7
+93.5 94.2 94.8 95.3 95.8 96.3 96.7 97.0 97.3 97.6 97.9 98.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">63&nbsp;&nbsp; 90.6 91.5 92.4
+93.3 94.0 94.6 95.2 95.7 96.2 96.6 96.9 97.2 97.5 97.8 98.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">62&nbsp;&nbsp; 90.3 91.3 92.2
+93.0 93.8 94.5 95.1 95.6 96.0 96.5 96.8 97.2 97.5 97.7 98.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">61&nbsp;&nbsp; 90.0 91.0 92.0
+92.8 93.6 94.3 94.9 95.4 95.9 96.4 96.7 97.1 97.4 97.7 97.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">60&nbsp;&nbsp; 89.7 90.8 91.7
+92.6 93.4 94.1 94.8 95.3 95.8 96.2 96.6 97.0 97.3 97.6 97.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">59&nbsp;&nbsp; 89.4 90.5 91.5
+92.4 93.2 94.0 94.6 95.2 95.7 96.1 96.5 96.9 97.2 97.5 97.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">58&nbsp;&nbsp; 89.2 90.3 91.3
+92.2 93.0 93.8 94.4 95.0 95.6 96.0 96.4 96.8 97.2 97.5 97.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">57&nbsp;&nbsp; 88.9 90.0 91.0
+92.0 92.8 93.6 94.3 94.9 95.4 95.9 96.4 96.7 97.1 97.4 97.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">56&nbsp;&nbsp; 88.6 89.7 90.8
+91.8 92.7 93.4 94.1 94.8 95.3 95.8 96.3 96.6 97.0 97.3 97.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">55&nbsp;&nbsp; 88.3 89.5 90.6
+91.6 92.5 93.3 94.0 94.6 95.2 95.7 96.2 96.6 96.9 97.2 97.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">54&nbsp;&nbsp; 88.0 89.2 90.3
+91.3 92.3 93.1 93.8 94.5 95.1 95.6 96.1 96.5 96.8 97.2 97.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">53&nbsp;&nbsp; 87.7 88.9 90.1
+91.1 92.1 92.9 93.7 94.3 94.9 95.5 95.9 96.4 96.8 97.1 97.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">52&nbsp;&nbsp; 87.4 88.7 89.8
+90.9 91.9 92.7 93.5 94.2 94.8 95.4 95.8 96.3 96.7 97.0 97.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">51&nbsp;&nbsp; 87.1 88.4 89.6
+90.7 91.7 92.6 93.3 94.1 94.7 95.2 95.7 96.2 96.6 96.9 97.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">50&nbsp;&nbsp; 86.8 88.1 89.3
+90.5 91.5 92.4 93.2 93.9 94.6 95.1 95.6 96.1 96.5 96.9 97.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">49&nbsp;&nbsp; 86.5 87.8 89.1
+90.2 91.3 92.2 93.0 93.8 94.4 95.0 95.5 96.0 96.4 96.8 97.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">48&nbsp;&nbsp; 86.2 87.6 88.8
+90.0 91.1 92.0 92.9 93.6 94.3 94.9 95.4 95.9 96.3 96.7 97.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">47&nbsp;&nbsp; 85.9 87.3 88.6
+89.8 90.8 91.8 92.7 93.5 94.2 94.8 95.3 95.8 96.3 96.6 97.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">46&nbsp;&nbsp; 85.6 87.0 88.3
+89.5 90.6 91.6 92.5 93.3 94.0 94.7 95.2 95.7 96.2 96.6 96.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">45&nbsp;&nbsp; 85.2 86.7 88.1
+89.3 90.4 91.4 92.4 93.2 93.9 94.5 95.1 95.6 96.1 96.5 96.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">44&nbsp;&nbsp; 84.9 86.4 87.8
+89.1 90.2 91.3 92.2 93.0 93.8 94.4 95.0 95.5 96.0 96.4 96.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">43&nbsp;&nbsp; 84.6 86.1 87.6
+88.8 90.0 91.1 92.0 92.9 93.6 94.3 94.9 95.4 95.9 96.3 96.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">42&nbsp;&nbsp; 84.3 85.9 87.3
+88.6 89.8 90.9 91.8 92.7 93.5 94.2 94.8 95.3 95.8 96.3 96.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">41&nbsp;&nbsp; 84.0 85.6 87.0
+88.4 89.6 90.7 91.7 92.5 93.3 94.0 94.7 95.2 95.7 96.2 96.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">40&nbsp;&nbsp; 83.6 85.3 86.8
+88.1 89.4 90.5 91.5 92.4 93.2 93.9 94.6 95.1 95.6 96.1 96.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">39&nbsp;&nbsp; 83.3 85.0 86.5
+87.9 89.1 90.3 91.3 92.2 93.1 93.8 94.4 95.0 95.6 96.0 96.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">38&nbsp;&nbsp; 83.0 84.7 86.2
+87.6 88.9 90.1 91.1 92.1 92.9 93.7 94.3 94.9 95.5 95.9 96.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">37&nbsp;&nbsp; 82.6 84.4 86.0
+87.4 88.7 89.9 91.0 91.9 92.8 93.5 94.2 94.8 95.4 95.9 96.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">36&nbsp;&nbsp; 82.3 84.1 85.7
+87.2 88.5 89.7 90.8 91.8 92.6 93.4 94.1 94.7 95.3 95.8 96.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">35&nbsp;&nbsp; 82.0 83.8 85.4
+86.9 88.3 89.5 90.6 91.6 92.5 93.3 94.0 94.6 95.2 95.7 96.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">34&nbsp;&nbsp; 81.6 83.5 85.1
+86.7 88.0 89.3 90.4 91.4 92.3 93.1 93.9 94.5 95.1 95.6 96.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">33&nbsp;&nbsp; 81.3 83.2 84.9
+86.4 87.8 89.1 90.2 91.3 92.2 93.0 93.7 94.4 95.0 95.5 96.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">32&nbsp;&nbsp; 80.9 82.8 84.6
+86.2 87.6 88.9 90.0 91.1 92.0 92.9 93.6 94.3 94.9 95.4 95.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">31&nbsp;&nbsp; 80.6 82.5 84.3
+85.9 87.4 88.7 89.9 90.9 91.9 92.7 93.5 94.2 94.8 95.4 95.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">30&nbsp;&nbsp; 80.2 82.2 84.0
+85.6 87.1 88.5 89.7 90.8 91.7 92.6 93.4 94.1 94.7 95.3 95.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">29&nbsp;&nbsp; 79.8 81.9 83.7
+85.4 86.9 88.3 89.5 90.6 91.6 92.5 93.3 94.0 94.6 95.2 95.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">28&nbsp;&nbsp; 79.5 81.6 83.4
+85.1 86.7 88.0 89.3 90.4 91.4 92.3 93.1 93.9 94.5 95.1 95.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">27&nbsp;&nbsp; 79.1 81.2 83.1
+84.9 86.4 87.8 89.1 90.3 91.3 92.2 93.0 93.8 94.4 95.0 95.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">26&nbsp;&nbsp; 78.7 80.9 82.8
+84.6 86.2 87.6 88.9 90.1 91.1 92.1 92.9 93.6 94.3 94.9 95.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">25&nbsp;&nbsp; 78.4 80.6 82.6
+84.3 85.9 87.4 88.7 89.9 91.0 91.9 92.8 93.5 94.2 94.8 95.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">24&nbsp;&nbsp; 78.0 80.2 82.3
+84.1 85.7 87.2 88.5 89.7 90.8 91.8 92.6 93.4 94.1 94.7 95.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">23&nbsp;&nbsp; 77.6 79.9 82.0
+83.8 85.5 87.0 88.3 89.6 90.7 91.6 92.5 93.3 94.0 94.6 95.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">22&nbsp;&nbsp; 77.2 79.6 81.7
+83.5 85.2 86.8 88.1 89.4 90.5 91.5 92.4 93.2 93.9 94.5 95.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">21&nbsp;&nbsp; 76.8 79.2 81.3
+83.3 85.0 86.5 87.9 89.2 90.3 91.4 92.3 93.1 93.8 94.5 95.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">20&nbsp;&nbsp; 76.4 78.9 81.0
+83.0 84.7 86.3 87.7 89.0 90.2 91.2 92.1 93.0 93.7 94.4 95.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">19&nbsp;&nbsp; 76.0 78.5 80.7
+82.7 84.5 86.1 87.5 88.8 90.0 91.1 92.0 92.8 93.6 94.3 94.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">18&nbsp;&nbsp; 75.6 78.2 80.4
+82.4 84.2 85.9 87.3 88.7 89.8 90.9 91.9 92.7 93.5 94.2 94.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">17&nbsp;&nbsp; 75.2 77.8 80.1
+82.1 84.0 85.6 87.1 88.5 89.7 90.8 91.7 92.6 93.4 94.1 94.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">16&nbsp;&nbsp; 74.8 77.4 79.8
+81.9 83.7 85.4 86.9 88.3 89.5 90.6 91.6 92.5 93.3 94.0 94.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">15&nbsp;&nbsp; 74.4 77.1 79.5
+81.6 83.5 85.2 86.7 88.1 89.4 90.5 91.5 92.4 93.2 93.9 94.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">14&nbsp;&nbsp; 73.9 76.7 79.1
+81.3 83.2 85.0 86.5 87.9 89.2 90.3 91.3 92.2 93.1 93.8 94.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">13&nbsp;&nbsp; 73.5 76.3 78.8
+81.0 83.0 84.7 86.3 87.7 89.0 90.2 91.2 92.1 93.0 93.7 94.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">12&nbsp;&nbsp; 73.1 75.9 78.5
+80.7 82.7 84.5 86.1 87.5 88.8 90.0 91.1 92.0 92.8 93.6 94.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">11&nbsp;&nbsp; 72.7 75.6 78.1
+80.4 82.4 84.3 85.9 87.4 88.7 89.9 90.9 91.9 92.7 93.5 94.2</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">10&nbsp;&nbsp; 72.2 75.2 77.8
+80.1 82.2 84.0 85.7 87.2 88.5 89.7 90.8 91.8 92.6 93.4 94.1</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">9&nbsp;&nbsp;&nbsp; 71.8 74.8
+77.5 79.8 81.9 83.8 85.5 87.0 88.3 89.6 90.7 91.6 92.5 93.3 94.0</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">8&nbsp;&nbsp;&nbsp; 71.3 74.4
+77.1 79.5 81.6 83.5 85.2 86.8 88.2 89.4 90.5 91.5 92.4 93.2 93.9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">7&nbsp;&nbsp;&nbsp; 70.9 74.0
+76.8 79.2 81.4 83.3 85.0 86.6 88.0 89.2 90.4 91.4 92.3 93.1 93.8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">6&nbsp;&nbsp;&nbsp; 70.4 73.6
+76.4 78.9 81.1 83.0 84.8 86.4 87.8 89.1 90.2 91.3 92.2 93.0 93.7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">5&nbsp;&nbsp;&nbsp; 70.0 73.2
+76.1 78.6 80.8 82.8 84.6 86.2 87.6 88.9 90.1 91.1 92.1 92.9 93.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">4&nbsp;&nbsp;&nbsp; 69.5 72.8
+75.7 78.3 80.5 82.6 84.4 86.0 87.5 88.8 89.9 91.0 91.9 92.8 93.6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">3&nbsp;&nbsp;&nbsp; 69.0 72.4
+75.4 77.9 80.3 82.3 84.1 85.8 87.3 88.6 89.8 90.9 91.8 92.7 93.5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">2&nbsp;&nbsp;&nbsp; 68.6 72.0
+75.0 77.6 80.0 82.1 83.9 85.6 87.1 88.4 89.7 90.7 91.7 92.6 93.4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">1&nbsp;&nbsp;&nbsp; 68.1 71.6
+74.6 77.3 79.7 81.8 83.7 85.4 86.9 88.3 89.5 90.6 91.6 92.5 93.3</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">0&nbsp;&nbsp;&nbsp; 67.6 71.2
+74.3 77.0 79.4 81.5 83.5 85.2 86.7 88.1 89.4 90.5 91.5 92.4 93.2</span></font><br>
+<br>
+<br>
+<font size="+1">Optimal Strategy for the Dice Game of Pig</font><br>
+<br>
+If you want to reach 100 (or more) in the number<br>
+of turns shown by the column headers, then match<br>
+your "Start of Turn" score with the leftmost<br>
+column and use these indexes to find the optimal<br>
+"Stop Number" in the table. You should voluntarily<br>
+stop rolling the dice when your cumulative dice sum<br>
+reaches or exceeds this "Stop Number."<br>
+(Lose turn total on single "1". Lose total score on double 1's.)<br>
+<br>
+Computer program by Bill Butler<br>
+<br>
+<font size="-1"><span style="font-family: Courier New;">Score at</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Start
+of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&nbsp; Intended Number of
+turns to reach 100 or higher&nbsp; ---&gt;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Turn&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10&nbsp;&nbsp;
+11&nbsp;&nbsp; 12&nbsp;&nbsp; 13&nbsp;&nbsp; 14&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">-------------------------------------------------------------------------------</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">93&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">90&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">89&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">88&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">87&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">86&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">85&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">84&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">83&nbsp;&nbsp;&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">82&nbsp;&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp; 18&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">81&nbsp;&nbsp;&nbsp;&nbsp;
+19&nbsp;&nbsp; 19&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">80&nbsp;&nbsp;&nbsp;&nbsp;
+20&nbsp;&nbsp; 20&nbsp;&nbsp; 12&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">79&nbsp;&nbsp;&nbsp;&nbsp;
+21&nbsp;&nbsp; 21&nbsp;&nbsp; 13&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">78&nbsp;&nbsp;&nbsp;&nbsp;
+22&nbsp;&nbsp; 22&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">77&nbsp;&nbsp;&nbsp;&nbsp;
+23&nbsp;&nbsp; 23&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">76&nbsp;&nbsp;&nbsp;&nbsp;
+24&nbsp;&nbsp; 24&nbsp;&nbsp; 15&nbsp;&nbsp; 13&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">75&nbsp;&nbsp;&nbsp;&nbsp;
+25&nbsp;&nbsp; 25&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">74&nbsp;&nbsp;&nbsp;&nbsp;
+26&nbsp;&nbsp; 26&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">73&nbsp;&nbsp;&nbsp;&nbsp;
+27&nbsp;&nbsp; 27&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp;
+11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">72&nbsp;&nbsp;&nbsp;&nbsp;
+28&nbsp;&nbsp; 28&nbsp;&nbsp; 18&nbsp;&nbsp; 15&nbsp;&nbsp;
+11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">71&nbsp;&nbsp;&nbsp;&nbsp;
+29&nbsp;&nbsp; 29&nbsp;&nbsp; 19&nbsp;&nbsp; 15&nbsp;&nbsp;
+11&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">70&nbsp;&nbsp;&nbsp;&nbsp;
+30&nbsp;&nbsp; 30&nbsp;&nbsp; 19&nbsp;&nbsp; 15&nbsp;&nbsp;
+12&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">69&nbsp;&nbsp;&nbsp;&nbsp;
+31&nbsp;&nbsp; 31&nbsp;&nbsp; 20&nbsp;&nbsp; 15&nbsp;&nbsp;
+12&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">68&nbsp;&nbsp;&nbsp;&nbsp;
+32&nbsp;&nbsp; 32&nbsp;&nbsp; 21&nbsp;&nbsp; 16&nbsp;&nbsp;
+13&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">67&nbsp;&nbsp;&nbsp;&nbsp;
+33&nbsp;&nbsp; 33&nbsp;&nbsp; 21&nbsp;&nbsp; 16&nbsp;&nbsp;
+13&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">66&nbsp;&nbsp;&nbsp;&nbsp;
+34&nbsp;&nbsp; 34&nbsp;&nbsp; 22&nbsp;&nbsp; 17&nbsp;&nbsp;
+13&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">65&nbsp;&nbsp;&nbsp;&nbsp;
+35&nbsp;&nbsp; 35&nbsp;&nbsp; 22&nbsp;&nbsp; 17&nbsp;&nbsp;
+14&nbsp;&nbsp; 12&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">64&nbsp;&nbsp;&nbsp;&nbsp;
+36&nbsp;&nbsp; 36&nbsp;&nbsp; 22&nbsp;&nbsp; 17&nbsp;&nbsp;
+14&nbsp;&nbsp; 12&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">63&nbsp;&nbsp;&nbsp;&nbsp;
+37&nbsp;&nbsp; 37&nbsp;&nbsp; 23&nbsp;&nbsp; 17&nbsp;&nbsp;
+14&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">62&nbsp;&nbsp;&nbsp;&nbsp;
+38&nbsp;&nbsp; 38&nbsp;&nbsp; 23&nbsp;&nbsp; 18&nbsp;&nbsp;
+14&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">61&nbsp;&nbsp;&nbsp;&nbsp;
+39&nbsp;&nbsp; 39&nbsp;&nbsp; 24&nbsp;&nbsp; 18&nbsp;&nbsp;
+15&nbsp;&nbsp; 13&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">60&nbsp;&nbsp;&nbsp;&nbsp;
+40&nbsp;&nbsp; 40&nbsp;&nbsp; 24&nbsp;&nbsp; 18&nbsp;&nbsp;
+15&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">59&nbsp;&nbsp;&nbsp;&nbsp;
+41&nbsp;&nbsp; 41&nbsp;&nbsp; 25&nbsp;&nbsp; 19&nbsp;&nbsp;
+16&nbsp;&nbsp; 14&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">58&nbsp;&nbsp;&nbsp;&nbsp;
+42&nbsp;&nbsp; 42&nbsp;&nbsp; 25&nbsp;&nbsp; 19&nbsp;&nbsp;
+16&nbsp;&nbsp; 14&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">57&nbsp;&nbsp;&nbsp;&nbsp;
+43&nbsp;&nbsp; 43&nbsp;&nbsp; 26&nbsp;&nbsp; 19&nbsp;&nbsp;
+17&nbsp;&nbsp; 14&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">56&nbsp;&nbsp;&nbsp;&nbsp;
+44&nbsp;&nbsp; 44&nbsp;&nbsp; 26&nbsp;&nbsp; 20&nbsp;&nbsp;
+17&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp; 11&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">55&nbsp;&nbsp;&nbsp;&nbsp;
+45&nbsp;&nbsp; 45&nbsp;&nbsp; 27&nbsp;&nbsp; 20&nbsp;&nbsp;
+17&nbsp;&nbsp; 15&nbsp;&nbsp; 13&nbsp;&nbsp; 11&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">54&nbsp;&nbsp;&nbsp;&nbsp;
+46&nbsp;&nbsp; 46&nbsp;&nbsp; 28&nbsp;&nbsp; 21&nbsp;&nbsp;
+18&nbsp;&nbsp; 15&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp;
+11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">53&nbsp;&nbsp;&nbsp;&nbsp;
+47&nbsp;&nbsp; 47&nbsp;&nbsp; 28&nbsp;&nbsp; 21&nbsp;&nbsp;
+18&nbsp;&nbsp; 15&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp;
+11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">52&nbsp;&nbsp;&nbsp;&nbsp;
+48&nbsp;&nbsp; 48&nbsp;&nbsp; 29&nbsp;&nbsp; 22&nbsp;&nbsp;
+19&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp; 12&nbsp;&nbsp;
+11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">51&nbsp;&nbsp;&nbsp;&nbsp;
+49&nbsp;&nbsp; 49&nbsp;&nbsp; 29&nbsp;&nbsp; 22&nbsp;&nbsp;
+19&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp; 12&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">50&nbsp;&nbsp;&nbsp;&nbsp;
+50&nbsp;&nbsp; 50&nbsp;&nbsp; 30&nbsp;&nbsp; 23&nbsp;&nbsp;
+19&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp;
+12&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">49&nbsp;&nbsp;&nbsp;&nbsp;
+51&nbsp;&nbsp; 51&nbsp;&nbsp; 31&nbsp;&nbsp; 23&nbsp;&nbsp;
+20&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp;
+12&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">48&nbsp;&nbsp;&nbsp;&nbsp;
+52&nbsp;&nbsp; 52&nbsp;&nbsp; 31&nbsp;&nbsp; 24&nbsp;&nbsp;
+20&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp; 13&nbsp;&nbsp;
+12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">47&nbsp;&nbsp;&nbsp;&nbsp;
+53&nbsp;&nbsp; 53&nbsp;&nbsp; 32&nbsp;&nbsp; 24&nbsp;&nbsp;
+20&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp; 13&nbsp;&nbsp;
+12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">46&nbsp;&nbsp;&nbsp;&nbsp;
+54&nbsp;&nbsp; 54&nbsp;&nbsp; 32&nbsp;&nbsp; 25&nbsp;&nbsp;
+21&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">45&nbsp;&nbsp;&nbsp;&nbsp;
+55&nbsp;&nbsp; 55&nbsp;&nbsp; 32&nbsp;&nbsp; 25&nbsp;&nbsp;
+21&nbsp;&nbsp; 18&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+13&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">44&nbsp;&nbsp;&nbsp;&nbsp;
+56&nbsp;&nbsp; 56&nbsp;&nbsp; 33&nbsp;&nbsp; 26&nbsp;&nbsp;
+21&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp;
+13&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">43&nbsp;&nbsp;&nbsp;&nbsp;
+57&nbsp;&nbsp; 57&nbsp;&nbsp; 33&nbsp;&nbsp; 26&nbsp;&nbsp;
+22&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp; 14&nbsp;&nbsp;
+13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">42&nbsp;&nbsp;&nbsp;&nbsp;
+58&nbsp;&nbsp; 58&nbsp;&nbsp; 34&nbsp;&nbsp; 26&nbsp;&nbsp;
+22&nbsp;&nbsp; 19&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">41&nbsp;&nbsp;&nbsp;&nbsp;
+59&nbsp;&nbsp; 59&nbsp;&nbsp; 34&nbsp;&nbsp; 27&nbsp;&nbsp;
+22&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp;
+14&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+11&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">40&nbsp;&nbsp;&nbsp;&nbsp;
+60&nbsp;&nbsp; 60&nbsp;&nbsp; 35&nbsp;&nbsp; 27&nbsp;&nbsp;
+23&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp;
+14&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">39&nbsp;&nbsp;&nbsp;&nbsp;
+61&nbsp;&nbsp; 61&nbsp;&nbsp; 35&nbsp;&nbsp; 28&nbsp;&nbsp;
+23&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp; 15&nbsp;&nbsp;
+14&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">38&nbsp;&nbsp;&nbsp;&nbsp;
+62&nbsp;&nbsp; 62&nbsp;&nbsp; 36&nbsp;&nbsp; 28&nbsp;&nbsp;
+23&nbsp;&nbsp; 20&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp;
+14&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">37&nbsp;&nbsp;&nbsp;&nbsp;
+63&nbsp;&nbsp; 63&nbsp;&nbsp; 37&nbsp;&nbsp; 28&nbsp;&nbsp;
+23&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp;
+14&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">36&nbsp;&nbsp;&nbsp;&nbsp;
+64&nbsp;&nbsp; 64&nbsp;&nbsp; 37&nbsp;&nbsp; 29&nbsp;&nbsp;
+24&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp;
+15&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">35&nbsp;&nbsp;&nbsp;&nbsp;
+65&nbsp;&nbsp; 65&nbsp;&nbsp; 38&nbsp;&nbsp; 29&nbsp;&nbsp;
+24&nbsp;&nbsp; 21&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp;
+15&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">34&nbsp;&nbsp;&nbsp;&nbsp;
+66&nbsp;&nbsp; 66&nbsp;&nbsp; 38&nbsp;&nbsp; 30&nbsp;&nbsp;
+24&nbsp;&nbsp; 21&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp;
+15&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">33&nbsp;&nbsp;&nbsp;&nbsp;
+67&nbsp;&nbsp; 67&nbsp;&nbsp; 39&nbsp;&nbsp; 30&nbsp;&nbsp;
+25&nbsp;&nbsp; 21&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp;
+15&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">32&nbsp;&nbsp;&nbsp;&nbsp;
+68&nbsp;&nbsp; 68&nbsp;&nbsp; 39&nbsp;&nbsp; 30&nbsp;&nbsp;
+25&nbsp;&nbsp; 22&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp;
+16&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">31&nbsp;&nbsp;&nbsp;&nbsp;
+69&nbsp;&nbsp; 69&nbsp;&nbsp; 40&nbsp;&nbsp; 31&nbsp;&nbsp;
+25&nbsp;&nbsp; 22&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">30&nbsp;&nbsp;&nbsp;&nbsp;
+70&nbsp;&nbsp; 70&nbsp;&nbsp; 40&nbsp;&nbsp; 31&nbsp;&nbsp;
+26&nbsp;&nbsp; 22&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">29&nbsp;&nbsp;&nbsp;&nbsp;
+71&nbsp;&nbsp; 71&nbsp;&nbsp; 41&nbsp;&nbsp; 32&nbsp;&nbsp;
+26&nbsp;&nbsp; 22&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">28&nbsp;&nbsp;&nbsp;&nbsp;
+72&nbsp;&nbsp; 72&nbsp;&nbsp; 41&nbsp;&nbsp; 32&nbsp;&nbsp;
+26&nbsp;&nbsp; 23&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">27&nbsp;&nbsp;&nbsp;&nbsp;
+73&nbsp;&nbsp; 73&nbsp;&nbsp; 42&nbsp;&nbsp; 32&nbsp;&nbsp;
+27&nbsp;&nbsp; 23&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp;
+17&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">26&nbsp;&nbsp;&nbsp;&nbsp;
+74&nbsp;&nbsp; 74&nbsp;&nbsp; 42&nbsp;&nbsp; 33&nbsp;&nbsp;
+27&nbsp;&nbsp; 23&nbsp;&nbsp; 21&nbsp;&nbsp; 19&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">25&nbsp;&nbsp;&nbsp;&nbsp;
+75&nbsp;&nbsp; 75&nbsp;&nbsp; 43&nbsp;&nbsp; 33&nbsp;&nbsp;
+27&nbsp;&nbsp; 24&nbsp;&nbsp; 21&nbsp;&nbsp; 19&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">24&nbsp;&nbsp;&nbsp;&nbsp;
+76&nbsp;&nbsp; 76&nbsp;&nbsp; 43&nbsp;&nbsp; 34&nbsp;&nbsp;
+28&nbsp;&nbsp; 24&nbsp;&nbsp; 21&nbsp;&nbsp; 19&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">23&nbsp;&nbsp;&nbsp;&nbsp;
+77&nbsp;&nbsp; 77&nbsp;&nbsp; 44&nbsp;&nbsp; 34&nbsp;&nbsp;
+28&nbsp;&nbsp; 24&nbsp;&nbsp; 22&nbsp;&nbsp; 19&nbsp;&nbsp;
+18&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">22&nbsp;&nbsp;&nbsp;&nbsp;
+78&nbsp;&nbsp; 78&nbsp;&nbsp; 44&nbsp;&nbsp; 34&nbsp;&nbsp;
+28&nbsp;&nbsp; 25&nbsp;&nbsp; 22&nbsp;&nbsp; 20&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">21&nbsp;&nbsp;&nbsp;&nbsp;
+79&nbsp;&nbsp; 79&nbsp;&nbsp; 45&nbsp;&nbsp; 35&nbsp;&nbsp;
+29&nbsp;&nbsp; 25&nbsp;&nbsp; 22&nbsp;&nbsp; 20&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">20&nbsp;&nbsp;&nbsp;&nbsp;
+80&nbsp;&nbsp; 80&nbsp;&nbsp; 45&nbsp;&nbsp; 35&nbsp;&nbsp;
+29&nbsp;&nbsp; 25&nbsp;&nbsp; 22&nbsp;&nbsp; 20&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">19&nbsp;&nbsp;&nbsp;&nbsp;
+81&nbsp;&nbsp; 81&nbsp;&nbsp; 46&nbsp;&nbsp; 36&nbsp;&nbsp;
+29&nbsp;&nbsp; 26&nbsp;&nbsp; 23&nbsp;&nbsp; 20&nbsp;&nbsp;
+19&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">18&nbsp;&nbsp;&nbsp;&nbsp;
+82&nbsp;&nbsp; 82&nbsp;&nbsp; 47&nbsp;&nbsp; 36&nbsp;&nbsp;
+30&nbsp;&nbsp; 26&nbsp;&nbsp; 23&nbsp;&nbsp; 21&nbsp;&nbsp;
+19&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">17&nbsp;&nbsp;&nbsp;&nbsp;
+83&nbsp;&nbsp; 83&nbsp;&nbsp; 47&nbsp;&nbsp; 36&nbsp;&nbsp;
+30&nbsp;&nbsp; 26&nbsp;&nbsp; 23&nbsp;&nbsp; 21&nbsp;&nbsp;
+19&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">16&nbsp;&nbsp;&nbsp;&nbsp;
+84&nbsp;&nbsp; 84&nbsp;&nbsp; 48&nbsp;&nbsp; 37&nbsp;&nbsp;
+31&nbsp;&nbsp; 27&nbsp;&nbsp; 23&nbsp;&nbsp; 21&nbsp;&nbsp;
+19&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">15&nbsp;&nbsp;&nbsp;&nbsp;
+85&nbsp;&nbsp; 85&nbsp;&nbsp; 48&nbsp;&nbsp; 37&nbsp;&nbsp;
+31&nbsp;&nbsp; 27&nbsp;&nbsp; 24&nbsp;&nbsp; 21&nbsp;&nbsp;
+20&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">14&nbsp;&nbsp;&nbsp;&nbsp;
+86&nbsp;&nbsp; 86&nbsp;&nbsp; 49&nbsp;&nbsp; 38&nbsp;&nbsp;
+31&nbsp;&nbsp; 27&nbsp;&nbsp; 24&nbsp;&nbsp; 22&nbsp;&nbsp;
+20&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">13&nbsp;&nbsp;&nbsp;&nbsp;
+87&nbsp;&nbsp; 87&nbsp;&nbsp; 49&nbsp;&nbsp; 38&nbsp;&nbsp;
+32&nbsp;&nbsp; 28&nbsp;&nbsp; 24&nbsp;&nbsp; 22&nbsp;&nbsp;
+20&nbsp;&nbsp; 19&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+16&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">12&nbsp;&nbsp;&nbsp;&nbsp;
+88&nbsp;&nbsp; 88&nbsp;&nbsp; 50&nbsp;&nbsp; 39&nbsp;&nbsp;
+32&nbsp;&nbsp; 28&nbsp;&nbsp; 25&nbsp;&nbsp; 22&nbsp;&nbsp;
+20&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">11&nbsp;&nbsp;&nbsp;&nbsp;
+89&nbsp;&nbsp; 89&nbsp;&nbsp; 50&nbsp;&nbsp; 39&nbsp;&nbsp;
+32&nbsp;&nbsp; 28&nbsp;&nbsp; 25&nbsp;&nbsp; 22&nbsp;&nbsp;
+21&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">10&nbsp;&nbsp;&nbsp;&nbsp;
+90&nbsp;&nbsp; 90&nbsp;&nbsp; 51&nbsp;&nbsp; 39&nbsp;&nbsp;
+33&nbsp;&nbsp; 28&nbsp;&nbsp; 25&nbsp;&nbsp; 23&nbsp;&nbsp;
+21&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+91&nbsp;&nbsp; 91&nbsp;&nbsp; 51&nbsp;&nbsp; 40&nbsp;&nbsp;
+33&nbsp;&nbsp; 29&nbsp;&nbsp; 25&nbsp;&nbsp; 23&nbsp;&nbsp;
+21&nbsp;&nbsp; 20&nbsp;&nbsp; 18&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+92&nbsp;&nbsp; 92&nbsp;&nbsp; 52&nbsp;&nbsp; 40&nbsp;&nbsp;
+34&nbsp;&nbsp; 29&nbsp;&nbsp; 26&nbsp;&nbsp; 23&nbsp;&nbsp;
+21&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+93&nbsp;&nbsp; 93&nbsp;&nbsp; 52&nbsp;&nbsp; 41&nbsp;&nbsp;
+34&nbsp;&nbsp; 29&nbsp;&nbsp; 26&nbsp;&nbsp; 23&nbsp;&nbsp;
+22&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+94&nbsp;&nbsp; 94&nbsp;&nbsp; 53&nbsp;&nbsp; 41&nbsp;&nbsp;
+34&nbsp;&nbsp; 30&nbsp;&nbsp; 26&nbsp;&nbsp; 24&nbsp;&nbsp;
+22&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+95&nbsp;&nbsp; 95&nbsp;&nbsp; 53&nbsp;&nbsp; 42&nbsp;&nbsp;
+35&nbsp;&nbsp; 30&nbsp;&nbsp; 26&nbsp;&nbsp; 24&nbsp;&nbsp;
+22&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+96&nbsp;&nbsp; 96&nbsp;&nbsp; 54&nbsp;&nbsp; 42&nbsp;&nbsp;
+35&nbsp;&nbsp; 30&nbsp;&nbsp; 27&nbsp;&nbsp; 24&nbsp;&nbsp;
+22&nbsp;&nbsp; 21&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+97&nbsp;&nbsp; 97&nbsp;&nbsp; 55&nbsp;&nbsp; 42&nbsp;&nbsp;
+35&nbsp;&nbsp; 31&nbsp;&nbsp; 27&nbsp;&nbsp; 25&nbsp;&nbsp;
+22&nbsp;&nbsp; 21&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+98&nbsp;&nbsp; 98&nbsp;&nbsp; 55&nbsp;&nbsp; 43&nbsp;&nbsp;
+36&nbsp;&nbsp; 31&nbsp;&nbsp; 27&nbsp;&nbsp; 25&nbsp;&nbsp;
+23&nbsp;&nbsp; 21&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+99&nbsp;&nbsp; 99&nbsp;&nbsp; 56&nbsp;&nbsp; 43&nbsp;&nbsp;
+36&nbsp;&nbsp; 31&nbsp;&nbsp; 28&nbsp;&nbsp; 25&nbsp;&nbsp;
+23&nbsp;&nbsp; 21&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp;
+18&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">0&nbsp;&nbsp;&nbsp;&nbsp;
+100&nbsp; 100&nbsp;&nbsp; 56&nbsp;&nbsp; 44&nbsp;&nbsp; 36&nbsp;&nbsp;
+32&nbsp;&nbsp; 28&nbsp;&nbsp; 25&nbsp;&nbsp; 23&nbsp;&nbsp;
+22&nbsp;&nbsp; 20&nbsp;&nbsp; 19&nbsp;&nbsp; 18&nbsp;&nbsp;
+18&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Score at</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Start
+of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&nbsp; Intended Number of
+turns to reach 100 or higher&nbsp; ---&gt;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Turn&nbsp;&nbsp; 16&nbsp;&nbsp;
+17&nbsp;&nbsp; 18&nbsp;&nbsp; 19&nbsp;&nbsp; 20&nbsp;&nbsp;
+21&nbsp;&nbsp; 22&nbsp;&nbsp; 23&nbsp;&nbsp; 24&nbsp;&nbsp;
+25&nbsp;&nbsp; 26&nbsp;&nbsp; 27&nbsp;&nbsp; 28&nbsp;&nbsp;
+29&nbsp;&nbsp; 30</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">-------------------------------------------------------------------------------</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">93&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">89&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">88&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">85&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">84&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">83&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">82&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">79&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">77&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">76&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">75&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">74&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">73&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">72&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">71&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">68&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">67&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">66&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp; 9</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">63&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">62&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">61&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">60&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">59&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">58&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">57&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp;
+10&nbsp;&nbsp; 10&nbsp;&nbsp; 10</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">56&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">55&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">54&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">53&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">52&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">51&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 11&nbsp;&nbsp; 11</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">50&nbsp;&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 11&nbsp;&nbsp; 11&nbsp;&nbsp;
+11&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">49&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">48&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">47&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">46&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">45&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">44&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">43&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp; 12&nbsp;&nbsp;
+12&nbsp;&nbsp; 12&nbsp;&nbsp; 12</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">42&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">41&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">40&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">39&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">38&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">37&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">36&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">35&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp; 13&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 13</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">34&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">33&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 13&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">32&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">31&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">30&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">29&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">28&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">27&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">26&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 14&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">25&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 14&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">24&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">23&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">22&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 14&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">21&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">20&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">19&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">18&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">17&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 15&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">16&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">15&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">14&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">13&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 15&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">12&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">11&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp; 15&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">10&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+16&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp; 16&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+17&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp; 17&nbsp;&nbsp;
+17&nbsp;&nbsp; 17&nbsp;&nbsp; 17</span></font><br>
+<br>
+<br>
+<a href="http://www.durangobill.com/Pig.html">Return to the Pig Main
+Page</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+<br>
+<br>
+Web page generated via <a href="http://www.kompozer.net/">KompoZer</a><a href="http://www.nvu.com/"><br>
+</a><br>
+</div>
+<font size="+2"><br>
+<br>
+</font></div>
+
+</div>
+</body></html>

@@ -1,0 +1,22 @@
+When tests.py is run, I recieve the following error:
+
+Fail: test_stun (__main__.TestProblem9)
+...
+	self.assertEqual('tunnel_0_3', bee.place.name, error_msg)
+AssertionError: 'tunnel_0_3' != 'tunnel_0_4'
+...
+
+
+
+
+
+
+Looking into the tests.py file, it appears that this is caused by the bee not advancing when bee.action is called the second time
+
+However
+
+When I run each of the actions listed in the tests.py file manually, the tests all pass in that the bee does nothing the first call and advances the second call
+
+I'm not sure what the problem is any help would be appreciated 
+
+Thank you

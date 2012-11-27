@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="proj2" root=".">
+      <df name="expected_results">
+      </df>
+      <df name="mipscode">
+        <in>ackermann.c</in>
+        <in>crt.s</in>
+        <in>fib.s</in>
+        <in>insts.s</in>
+        <in>io.h</in>
+        <in>nchoosek.s</in>
+        <in>qsort.c</in>
+        <in>reduce.s</in>
+        <in>rt13.s</in>
+        <in>rt25.s</in>
+        <in>rt3.s</in>
+        <in>rt30.c</in>
+        <in>simple.s</in>
+        <in>test.c</in>
+        <in>test_s.s</in>
+      </df>
+      <in>disassemble.c</in>
+      <in>disassemble.h</in>
+      <in>elf.h</in>
+      <in>load_program.c</in>
+      <in>load_program.h</in>
+      <in>memory.c</in>
+      <in>memory.h</in>
+      <in>processor.c</in>
+      <in>processor.h</in>
+      <in>sim.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem></pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="mipscode/ackermann.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="mipscode/crt.s" ex="true" tool="4" flavor2="0">
+      </item>
+      <item path="mipscode/insts.s" ex="true" tool="4" flavor2="0">
+      </item>
+      <item path="mipscode/io.h" ex="true" tool="3" flavor2="0">
+      </item>
+      <item path="mipscode/qsort.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="mipscode/rt13.s" ex="true" tool="4" flavor2="0">
+      </item>
+      <item path="mipscode/rt25.s" ex="true" tool="4" flavor2="0">
+      </item>
+      <item path="mipscode/rt3.s" ex="true" tool="4" flavor2="0">
+      </item>
+      <item path="mipscode/rt30.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="mipscode/simple.s" ex="true" tool="4" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
