@@ -9,3 +9,5 @@ MAI - modification of Jarvis to function as an artificial interviewer
 Quant - quantitative analysis on equities 
 
 Sentiment - sentiment analyzer that checks twitter's feelings around an input phrase
+
+License in LICENSE file and applies to all projects except curricular projects
