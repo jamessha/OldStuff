@@ -12,3 +12,6 @@ E:\Dropbox\Projects\AI\Jarvis\jarvis_dev\obj\Debug\jarvis_dev.csprojResolveAssem
 D:\Dropbox\Projects\AI\Jarvis\jarvis_dev\bin\Debug\Test.exe.config
 D:\Dropbox\Projects\AI\Jarvis\jarvis_dev\obj\Debug\Test.exe
 D:\Dropbox\Projects\AI\Jarvis\jarvis_dev\obj\Debug\Test.pdb
+D:\github\Personal-Projects\Jarvis\jarvis_dev\bin\Debug\Test.exe.config
+D:\github\Personal-Projects\Jarvis\jarvis_dev\obj\Debug\Test.exe
+D:\github\Personal-Projects\Jarvis\jarvis_dev\obj\Debug\Test.pdb

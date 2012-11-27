@@ -4,3 +4,6 @@ E:\Dropbox\Projects\AI\MAI\mai_dev\obj\Debug\Test.pdb
 E:\Dropbox\Projects\AI\MAI\mai_dev\bin\Debug\Test.exe
 E:\Dropbox\Projects\AI\MAI\mai_dev\bin\Debug\Test.pdb
 E:\Dropbox\Projects\AI\MAI\mai_dev\obj\Debug\mai_dev.csprojResolveAssemblyReference.cache
+D:\github\Personal-Projects\MAI\mai_dev\bin\Debug\Test.exe.config
+D:\github\Personal-Projects\MAI\mai_dev\obj\Debug\Test.exe
+D:\github\Personal-Projects\MAI\mai_dev\obj\Debug\Test.pdb
