@@ -8,6 +8,7 @@ CPU (Logisim) - a 16-bit processor implemented in Logisim
 EC2 (Java) - Map-Reduce to search for words associated with a given word
 Matrix Multiply (C) - Parallel implementation for efficient matrix multiplication
 Mips Simulator (C) - a simulator for Mips assembly language
+ML Exercises (Matlab) - all exercises from the Stanford machine learning course on Coursera
 Photoshop (Java) - a implementation of photo editing software
 Pig (Python) - dice game between two players, includes optimized auto player
 Scheme Interpreter (Python) - interpreter for the scheme language
