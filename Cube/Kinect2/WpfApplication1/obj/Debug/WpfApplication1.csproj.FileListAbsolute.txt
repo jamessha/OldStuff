@@ -1,0 +1,13 @@
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\bin\Debug\WpfApplication1.exe
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\bin\Debug\WpfApplication1.pdb
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\MainWindow.baml
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\MainWindow.g.cs
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\App.g.cs
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.cache
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1.g.resources
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1.exe
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1.pdb
+D:\Hackathon\2012HackathonLocal\Kinect2\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
