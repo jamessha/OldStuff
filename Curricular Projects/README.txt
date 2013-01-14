@@ -1,5 +1,5 @@
 This folder contains all of the projects that I have worked on in my studies
-I recieved full marks (and extra credit on some) for all projects except EC2 (there was a minor bug I overlooked)
+I recieved full marks (and extra credit on some) for all projects
 
 Ants (Python) - a game similar to Plants vs Zombies
 Blocks (Java) - a solver for a game in which one must slide a board of blocks into a final configuration following a set of rules
