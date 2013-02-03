@@ -1,5 +1,6 @@
 This folder contains all of the projects that I have worked on in my studies
 I recieved full marks (and extra credit on some) for all projects
+Note: If any instructor needs any project taken down, please just tell me and I'll take it down thanks =) 
 
 Ants (Python) - a game similar to Plants vs Zombies
 Blocks (Java) - a solver for a game in which one must slide a board of blocks into a final configuration following a set of rules
