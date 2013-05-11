@@ -43,3 +43,14 @@ D:\Dropbox\Projects\AI\Kinect\Cursor3\WpfApplication1\bin\Debug\Emgu.CV.Stitchin
 D:\Dropbox\Projects\AI\Kinect\Cursor3\WpfApplication1\bin\Debug\Emgu.CV.UI.xml
 D:\Dropbox\Projects\AI\Kinect\Cursor3\WpfApplication1\bin\Debug\Emgu.CV.VideoStab.xml
 D:\Dropbox\Projects\AI\Kinect\Cursor3\WpfApplication1\bin\Debug\Emgu.Util.xml
+D:\github\myprojects\Cursor3\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1.exe
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1.pdb
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\MainWindow.baml
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\MainWindow.g.cs
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\App.g.cs
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.cache
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1.g.resources
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+D:\github\myprojects\Cursor3\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache

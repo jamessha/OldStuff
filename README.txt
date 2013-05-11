@@ -1,6 +1,5 @@
 This repository contains all of the projects that I have worked and are working on. The folder breakdown is as follows:
 
-Curricular Projects - all projects that I have worked on in my studies
 Cube - a motion controlled rubik's cube
 Cursor3 - gesture UI
 Jarvis - speech and computer assistant
